@@ -12,38 +12,43 @@
 </head>
 <body class="bg-slate-800">
     <section class="max-w-md min-h-screen mx-auto bg-slate-200 p-5">
-        <!-- Logos -->
-        <div class="text-center flex justify-center">
-            <img class="w-[50%]" src="payoo.png" alt="Payoo Logo photo">
-        </div>
+      <header>
+          <!-- Logos -->
+       <nav class=" flex justify-center items-center">
+        <div class=" w-4/6 flex items-center">
+          <img src="assets/logo-bg.png" alt="">
+          <img class="relative -left-[55%]" src="assets/logo.png" alt="">
+      </div>
+     </nav>
 
-        <!-- Form -->
+      <!-- Form -->
 <div class="flex justify-center">
-    <div class=" card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-      <form class="card-body">
-        <div class="form-control">
-          <label class="label">
-            <span class="label-text">Account Number:</span>
-          </label>
-          <input id="account-number" type="number" placeholder="Account number" class="input input-bordered" required />
-        </div>
-        <div class="form-control">
-          <label class="label">
-            <span class="label-text">PIN:</span>
-          </label>
-          <input id="pin" type="text" placeholder="PIN" class="input input-bordered" required />
-         
-        </div>
-        <div class="form-control mt-6">
-          <button id="btn-submit" class="btn btn-primary rounded-full">Login</button>
-        </div>
-      </form>
-    </div>
+  <div class=" card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+    <form class="card-body">
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Account Number:</span>
+        </label>
+        <input id="account-number" value="01818181818" type="number" placeholder="Account number" class="input input-bordered" required />
+      </div>
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">PIN:</span>
+        </label>
+        <input id="pin" value="12345" type="text" placeholder="PIN" class="input input-bordered" required />
+       
+      </div>
+      <div class="form-control mt-6">
+        <button id="btn-submit" class="btn btn-neutral rounded-full">Login</button>
+      </div>
+    </form>
+  </div>
 </div>
+      </header>
 
     </section>
 
 
-    <script src="./scripts/payoo.js"></script>
+    <script src="./scripts/login.js"></script>
 </body>
 </html>
