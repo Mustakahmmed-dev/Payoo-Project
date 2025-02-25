@@ -16,7 +16,7 @@
             <div class="flex items-center gap-2">
                 <img src="assets/logo.png" alt="Payoo Logo">
                 <div>
-                    <h2 class="text-2xl font-bold">$50000</h2>
+                    <h2 class="text-2xl font-bold"> $<span id="current-balance">3500</span> </h2>
                     <p class="text-gray-500">Availabe Balance</p>
                 </div>
             </div>
@@ -84,13 +84,13 @@
                         <label class="label">
                           <span class="label-text">Amount</span>
                         </label>
-                        <input type="number" placeholder="Enter amount" class="input input-bordered" required />
+                        <input id="amount" type="number" value="0" placeholder="Enter amount" class="input input-bordered" required />
                       </div>
                       <div class="form-control">
                         <label class="label">
                           <span class="label-text">PIN</span>
                         </label>
-                        <input type="text" value="1234" maxlength="4" placeholder="PIN" class="input input-bordered" required />
+                        <input id="pin" type="text" value="1234" maxlength="4" placeholder="PIN" class="input input-bordered" required />
                         <label class="label">
                           <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
                         </label>
@@ -130,6 +130,6 @@
     
         </section>
 
-
+<script src="./scripts/addmoney.js"></script>
 </body>
 </html>
