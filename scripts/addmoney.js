@@ -11,9 +11,14 @@ document.getElementById("add-money-btn").addEventListener("click", function(even
     const convertedCurrentBalance = parseFloat(currentBalance)
     
     
-    if(convertedPin === 1234){
-        const newAmount = convertedAmount + convertedCurrentBalance;
-        document.getElementById("current-balance").innerText = newAmount;
+    if(amount && pin){
+        if(convertedPin === 1234){
+            const newAmount = convertedAmount + convertedCurrentBalance;
+            document.getElementById("current-balance").innerText = newAmount;
+        }
+        else{
+            alert("Please enter a valid PIN")
+        }
     }
     else{
         alert("Sorry, something went wrong")
