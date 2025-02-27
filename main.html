@@ -39,11 +39,11 @@
                 <img class="inline" src="assets/cashout.png" alt="">
                 <h2 class="text-gray-600">Cashout</h2>
             </div>
-            <div class="border-2 rounded-lg text-center p-3 space-y-3 cursor-pointer">
+            <div id="transfer-money-card" class="border-2 rounded-lg text-center p-3 space-y-3 cursor-pointer">
                 <img class="inline" src="assets/transfer.png" alt="">
                 <h2 class="text-gray-600">Transfer Money</h2>
             </div>
-            <div class="border-2 rounded-lg text-center p-3 space-y-3 cursor-pointer">
+            <div id="transaction-money-card" class=" border-2 rounded-lg text-center p-3 space-y-3 cursor-pointer">
                 <img class="inline" src="assets/transaction.png" alt="">
                 <h2 class="text-gray-600">transactions</h2>
             </div>
@@ -66,7 +66,7 @@
                   <div class="card w-full max-w-sm shrink-0 shadow-2xl">
                     <form class="card-body">
                         <fieldset>Select Bank</fieldset>
-                        <select class="select select-bordered w-full max-w-xs" required>
+                        <select id="all-banks" class="select select-bordered w-full max-w-xs" required>
                             <option disabled selected>Select bank</option>
                             <option value="Bkash">Bkash</option>
                             <option value="Nagad">Nagad</option>
@@ -78,7 +78,7 @@
                         <label class="label">
                           <span class="label-text">Account Number</span>
                         </label>
-                        <input type="number" value="01812050131" maxlength="11" placeholder="Account" class="input input-bordered" required />
+                        <input id="add-money-account" type="number" value="01812050131" maxlength="11" placeholder="Account" class="input input-bordered" required />
                       </div>
                       <div class="form-control">
                         <label class="label">
@@ -110,7 +110,7 @@
             <div class="card w-full max-w-sm shrink-0 shadow-2xl">
               <form class="card-body">
                   <fieldset>Select Bank</fieldset>
-                  <select class="select select-bordered w-full max-w-xs" required>
+                  <select id="bank-name" class="select select-bordered w-full max-w-xs" required>
                       <option disabled selected>Select bank</option>
                       <option value="Bkash">Bkash</option>
                       <option value="Nagad">Nagad</option>
@@ -122,7 +122,7 @@
                   <label class="label">
                     <span class="label-text">Account Number</span>
                   </label>
-                  <input type="number" value="01812050131" maxlength="11" placeholder="Account" class="input input-bordered" required />
+                  <input id="account-number" type="number" value="01812050131" maxlength="11" placeholder="Account" class="input input-bordered" required />
                 </div>
                 <div class="form-control">
                   <label class="label">
@@ -146,11 +146,62 @@
             </div>
            </section>
 
+           <!-- Transfer money form section -->
+            <section id="transfer-money-sec" class="p-5 hidden">
+              <h2 class="text-xl font-semibold mb-6">Trasnfer Money</h2>
+
+            <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+              <form class="card-body">
+                  <fieldset>Select Bank</fieldset>
+                  <select id="transfer-bank-name" class="select select-bordered w-full max-w-xs" required>
+                      <option disabled selected>Select bank</option>
+                      <option value="Bkash">Bkash</option>
+                      <option value="Nagad">Nagad</option>
+                      <option value="Rocket">Rocket</option>
+                      <option value="Paypal">Paypal</option>
+                    </select>
+
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Account Number</span>
+                  </label>
+                  <input id="transfer-account" type="number" value="01812050131" maxlength="11" placeholder="Account" class="input input-bordered" required />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Transfer Amount</span>
+                  </label>
+                  <input id="transfer-amount" type="number" placeholder="Enter amount" class="input input-bordered" required />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">PIN</span>
+                  </label>
+                  <input id="transfer-pin" type="text" value="1234" maxlength="4" placeholder="PIN" class="input input-bordered" required />
+                  <label class="label">
+                    <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                  </label>
+                </div>
+                <div class="form-control mt-6">
+                  <button id="transfer-money-btn" class="btn btn-primary">Trasnfer Money</button>
+                </div>
+              </form>
+            </div>
+            </section>
+          
+           <!-- Transactions history -->
+           <section id="transactions-sec" class="hidden p-4">
+            <h1 class="text-3xl text-red-400 text-center my-5 font-semibold">Transactions History</h1>
+            <div id="container" class="list-decimal">
+
+            </div>
+           </section>
 
   </section>
 <script src="./scripts/addmoney.js"></script>
 <script src="./scripts/toggle.js"></script>
 <script src="./scripts/cashout.js"></script>
+<script src="scripts/transfermoney.js"></script>
 
 </body>
 </html>
